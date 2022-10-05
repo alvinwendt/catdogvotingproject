@@ -9,7 +9,7 @@ const applicationState = {
   selection: [],
 };
 
-//TEST SECTION
+//---------------------------TEST SECTION------------------------------------
 
 //function to test output of fetch calls
 // const test = async () => {
@@ -23,7 +23,7 @@ const applicationState = {
 // };
 // test();
 
-//RANDOM IMAGES SECTION
+//------------------------RANDOM IMAGES SECTION------------------------------
 
 //function to fetch a Random Dog from API every page load
 export const fetchRandomDog = async () => {
@@ -49,7 +49,7 @@ export const getRandomCat = () => {
   return applicationState.randomCat.map((x) => ({ ...x }));
 };
 
-//VOTES SECTION
+//---------------------------VOTES SECTION--------------------------------------
 
 //function to fetch 10 most recent votes
 export const fetchVotes = async () => {
@@ -63,4 +63,8 @@ export const getVotes = () => {
   return applicationState.votes.map((x) => ({ ...x }));
 };
 
-//TODO post vote submission to local API
+//---------------------------Submit Votes Section------------------------------
+
+// Function to add (POST) vote obj to API here.
+
+//
