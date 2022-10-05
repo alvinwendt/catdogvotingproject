@@ -1,0 +1,35 @@
+h2 {
+    border-bottom: 1px solid rgb(172, 172, 172);
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 95%;
+}
+
+#feed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 100%;
+    border: 1px solid black;
+}
+
+#feedVotes {
+    list-style: none;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.vote {
+    border: 1px solid blue;
+    height: 300px;
+    padding: 30px;
+}
+
+.exampleImage {
+    background-color: red;
+    height: 200px;
+}
