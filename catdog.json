@@ -1,0 +1,27 @@
+{"votes": [
+    {
+        "id": 1,
+        "url": "https://cdn2.thedogapi.com/images/HJf4jl9VX_1280.jpg",
+        "animal": "cat",
+        "dateTime": "timestamp goes here",
+        "title": "userinput",
+        "description": "userinput",
+        "imgid": "HJf4jl9VX",
+        "userid": 1
+    }
+],
+
+"users": [{
+    "id": 1,
+    "username": "John"
+  }
+],
+  
+"favorites":[{
+    "id": 1,
+    "userid": 1,
+    "imgid": "HJf4jl9VX"
+  }
+]
+  
+}
