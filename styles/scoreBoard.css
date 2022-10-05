@@ -1,0 +1,34 @@
+#scoreboard {
+  display: grid;
+  /* 2 column grid */
+  grid-template-columns: 1fr 1fr;
+  width: 400px;
+  font-family: 'Quicksand', sans-serif;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.scoreboard-name,
+.score {
+  padding: 10px;
+  text-align: center;
+}
+
+.scoreboard-name {
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.scoreboard-name-one {
+  color: #009578;
+}
+
+.scoreboard-name-two {
+  color: #2d0095;
+}
+
+.score {
+  font-size: 2em;
+}
