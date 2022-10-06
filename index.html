@@ -6,28 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat and Dog Voting Project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
     <div id="scoreboard">
-        <section class="scoreboard-name scoreboard-name-one">Cat</section>
         <section class="scoreboard-name scoreboard-name-two">Dog</section>
+        <section class="scoreboard-name scoreboard-name-one">Cat</section>
         <section class="score">0</section>
         <section class="score">0</section>
-
-
-
     </div>
     <div id="voting">
         <section class="voting-header">
-            <h3>Dogs VS Cats!</h3>
+            <h1>Dogs VS Cats!</h1>
             <p>Select which picture is the most cutest and most perfect! Your chosen selection will follow you to the
                 next epic battle of cuteness. See how many rounds you can go! </p>
         </section>
         <section class="voting-imgs">
-            <div id="dog--APIIDGOESHERE" class="dog img">DOG IMG HERE</div>
-            <div id="cat--APIIDGOESHERE" class="cat img">CAT IMG HERE</div>
+            <div class="imgContainer"><img id="dog--APIIDGOESHERE" class="dog img" src="./images/dog-reference.jpg" alt="Dog."></div>
+            <div class="imgContainer"><img id="cat--APIIDGOESHERE" class="cat img" src="./images/cat-reference.jpg" alt="Cat."></div>
         </section>
         <section class="vote-options">
             <button id="submitBtn">Submit Your Vote</button>
@@ -37,19 +39,19 @@
         <h2>Your Picks</h3>
         <ul id="feedVotes">
             <li class="vote">
-                <div class="exampleImage"></div>
+                <img class="exampleImg" src="./images/dog-reference.jpg" alt="Dog.">
             </li>
             <li class="vote">
-                <div class="exampleImage"></div>
+                <img class="exampleImg" src="./images/cat-reference.jpg" alt="Cat.">
             </li>
             <li class="vote">
-                <div class="exampleImage"></div>
+                <img class="exampleImg" src="./images/dog-reference.jpg" alt="Dog.">
             </li>
             <li class="vote">
-                <div class="exampleImage"></div>
+                <img class="exampleImg" src="./images/cat-reference.jpg" alt="Cat.">
             </li>
             <li class="vote">
-                <div class="exampleImage"></div>
+                <img class="exampleImg" src="./images/dog-reference.jpg" alt="Dog.">
             </li>
         </ul>
     </div>

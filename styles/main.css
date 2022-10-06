@@ -1,3 +1,8 @@
 @import "./feed.css";
 @import "./scoreBoard.css";
 @import "./voting.css";
+
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
