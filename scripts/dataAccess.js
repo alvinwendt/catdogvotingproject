@@ -55,7 +55,7 @@ export const getRandomCat = () => {
 export const fetchVotes = async () => {
   const data = await fetch(`${dbAPI}/votes?_sort=dateTime&_order=desc&_page=1`);
   const jsonData = await data.json();
-  applicationState.votes.push(jsonData);
+  applicationState.votes = jsonData;
 };
 
 //function to get copy of applicationState votes
