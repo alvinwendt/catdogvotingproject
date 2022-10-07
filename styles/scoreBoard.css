@@ -2,13 +2,14 @@
   display: grid;
   /* 2 column grid */
   grid-template-columns: 1fr 1fr;
-  width: 400px;
-  font-family: 'Quicksand', sans-serif;
-  border: 1px solid #ddd;
+  width: 30%;
+  min-width: 400px;
+  margin: 20px 45% 0 auto;
   padding: 10px;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  margin-left: 100px;
+  font-family: 'Quicksand', sans-serif;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 2px;
+  box-shadow: 0 2.8px 2.2px rgba(66, 62, 46, 0.6);
 }
 
 .scoreboard-name,
