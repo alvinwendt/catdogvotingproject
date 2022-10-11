@@ -27,7 +27,7 @@ export const catsDogs = () => {
 };
 
 export const updateScoreBoard = () => {
-  document.getElementById("dogScore").innerHTML = getDogVoteCount();
-  document.getElementById("catScore").innerHTML = getCatVoteCount();
+  document.getElementById("scoreDog").innerHTML = getDogVoteCount();
+  document.getElementById("scoreCat").innerHTML = getCatVoteCount();
   //loop through all votes, if current vote
 };
