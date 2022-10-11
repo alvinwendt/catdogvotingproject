@@ -1,13 +1,13 @@
-import { catsDogs, updateScoreBoard } from "./catsDogs.js";
+import { catsDogs, updateScoreBoard } from './catsDogs.js';
 import {
   fetchRandomDog,
   fetchRandomCat,
   fetchCatVoteCount,
   fetchDogVoteCount,
-} from "./dataAccess.js";
-import { displayFeed } from "./feed.js";
+} from './dataAccess.js';
+import { displayFeed } from './feed.js';
 
-const container = document.querySelector("#voting");
+const container = document.querySelector('#voting');
 
 const render = async () => {
   await fetchRandomDog();
@@ -21,13 +21,17 @@ const render = async () => {
 
 render();
 
-document.addEventListener("click", (clickEvent) => {
+document.addEventListener('click', (clickEvent) => {
   const itemClicked = clickEvent.target;
-  if (itemClicked.id.startsWith("dog")) {
-    itemClicked.classList.add("selected");
-    document.querySelector(`[id^="cat"]`).classList.remove("selected");
-  } else if (itemClicked.id.startsWith("cat")) {
-    itemClicked.classList.add("selected");
-    document.querySelector(`[id^="dog"]`).classList.remove("selected");
+  if (itemClicked.id.startsWith('dog')) {
+    itemClicked.classList.add('selected');
+    document.querySelector(`[id^="cat"]`).classList.remove('selected');
+  } else if (itemClicked.id.startsWith('cat')) {
+    itemClicked.classList.add('selected');
+    document.querySelector(`[id^="dog"]`).classList.remove('selected');
   }
+});
+
+document.addEventListener('stateChanged', (customEvent) => {
+  render();
 });

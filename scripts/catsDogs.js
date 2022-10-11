@@ -3,7 +3,8 @@ import {
   getRandomCat,
   getDogVoteCount,
   getCatVoteCount,
-} from "./dataAccess.js";
+  postVote,
+} from './dataAccess.js';
 
 export const catsDogs = () => {
   const randomDog = getRandomDog();
@@ -27,7 +28,25 @@ export const catsDogs = () => {
 };
 
 export const updateScoreBoard = () => {
-  document.getElementById("scoreDog").innerHTML = getDogVoteCount();
-  document.getElementById("scoreCat").innerHTML = getCatVoteCount();
+  document.getElementById('scoreDog').innerHTML = getDogVoteCount();
+  document.getElementById('scoreCat').innerHTML = getCatVoteCount();
   //loop through all votes, if current vote
 };
+
+document.addEventListener('click', (clickEvent) => {
+  if (clickEvent.target.id === 'submitBtn') {
+    const selectedImg = document.querySelector('.selected');
+    const [animal, imgId] = selectedImg.id.split('--');
+
+    const dataToSendToAPI = {
+      url: selectedImg.src,
+      animal: animal,
+      dateTime: Date.now(),
+      title: '',
+      description: '',
+      imgid: imgId,
+      userid: 1,
+    };
+    postVote(dataToSendToAPI);
+  }
+});
