@@ -24,7 +24,8 @@ p {
   height: 400px;
   margin: 15px;
   background-color: rgb(27, 27, 27);
-  border-radius: 2px;;
+  border-radius: 2px;
+  ;
 }
 
 .img {
@@ -52,6 +53,9 @@ p {
 
 .selected {
   border: 5px solid rgb(64, 185, 64);
+  background-color: rgba(64, 185, 62, 0.3);
+  width: 100%;
+  height: 100%;
 }
 
 #submitBtn {
