@@ -1,4 +1,9 @@
-import { getRandomDog, getRandomCat, getAllVotes } from "./dataAccess.js";
+import {
+  getRandomDog,
+  getRandomCat,
+  getDogVoteCount,
+  getCatVoteCount,
+} from "./dataAccess.js";
 
 export const catsDogs = () => {
   const randomDog = getRandomDog();
@@ -22,6 +27,7 @@ export const catsDogs = () => {
 };
 
 export const updateScoreBoard = () => {
-  const allVotes = getAllVotes();
+  document.getElementById("dogScore").innerHTML = getDogVoteCount();
+  document.getElementById("catScore").innerHTML = getCatVoteCount();
   //loop through all votes, if current vote
 };

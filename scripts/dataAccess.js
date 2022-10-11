@@ -7,8 +7,8 @@ const applicationState = {
   randomDog: [],
   randomCat: [],
   selection: [],
-  dogVoteCount: [],
-  catVoteCount: [],
+  dogVoteCount: 0,
+  catVoteCount: 0,
 };
 
 //---------------------------TEST SECTION------------------------------------
@@ -64,16 +64,22 @@ export const fetchVotes = async () => {
 export const getVotes = () => {
   return applicationState.votes.map((x) => ({ ...x }));
 };
-//function to fetch 10 most recent votes
+//function to fetch the number of votes with dogs as animals
 export const fetchDogVoteCount = async () => {
-  const data = await fetch(`${dbAPI}/votes`);
+  const data = await fetch(`${dbAPI}/votes?animal_like=dog`);
   const jsonData = await data.json();
-  applicationState.allVotes = jsonData;
+  applicationState.dogVoteCount = jsonData.length;
 };
-
-//function to get copy of applicationState votes
-export const getAllVotes = () => {
-  return applicationState.allVotes.map((x) => ({ ...x }));
+export const getDogVoteCount = () => {
+  return applicationState.dogVoteCount;
+};
+export const fetchCatVoteCount = async () => {
+  const data = await fetch(`${dbAPI}/votes?animal_like=cat`);
+  const jsonData = await data.json();
+  applicationState.catVoteCount = jsonData.length;
+};
+export const getCatVoteCount = () => {
+  return applicationState.catVoteCount;
 };
 
 //---------------------------Submit Votes Section------------------------------
