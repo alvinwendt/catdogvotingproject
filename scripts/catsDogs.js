@@ -22,19 +22,17 @@ export const catsDogs = () => {
 };
 
 mainContainer.addEventListener('click', (clickEvent) => {
-    if (clickEvent.target.id === 'submitBtn') {
-       
-        
-
-        const dataToSendToAPI = {
-        id: id,
-        url: url,
-        animal: animal,
-        dateTime: timestamp,
-        title: title,
-        description: description,
-        imgid: imgid,
-        userid: userid
-    }
-    postVote(dataToSendToAPI)
-    }
+  if (clickEvent.target.id === 'submitBtn') {
+    const dataToSendToAPI = {
+      id: id,
+      url: url,
+      animal: animal,
+      dateTime: timestamp,
+      title: title,
+      description: description,
+      imgid: imgid,
+      userid: userid,
+    };
+    postVote(dataToSendToAPI);
+  }
+});
