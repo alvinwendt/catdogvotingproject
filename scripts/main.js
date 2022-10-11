@@ -1,4 +1,3 @@
-import { fetchRandomDog } from "./dataAccess.js";
 import { catsDogs } from "./catsDogs.js";
 import { fetchRandomDog, fetchRandomCat } from "./dataAccess.js";
 import { displayFeed } from "./feed.js";
