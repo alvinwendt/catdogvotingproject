@@ -1,12 +1,14 @@
-const dogAPI = 'https://api.thedogapi.com/v1/images';
-const catAPI = 'https://api.thecatapi.com/v1/images';
-const dbAPI = 'http://localhost:8080';
+const dogAPI = "https://api.thedogapi.com/v1/images";
+const catAPI = "https://api.thecatapi.com/v1/images";
+const dbAPI = "http://localhost:8080";
 
 const applicationState = {
   votes: [],
   randomDog: [],
   randomCat: [],
   selection: [],
+  dogVoteCount: 0,
+  catVoteCount: 0,
 };
 
 //---------------------------TEST SECTION------------------------------------
@@ -61,6 +63,23 @@ export const fetchVotes = async () => {
 //function to get copy of applicationState votes
 export const getVotes = () => {
   return applicationState.votes.map((x) => ({ ...x }));
+};
+//function to fetch the number of votes with dogs as animals
+export const fetchDogVoteCount = async () => {
+  const data = await fetch(`${dbAPI}/votes?animal_like=dog`);
+  const jsonData = await data.json();
+  applicationState.dogVoteCount = jsonData.length;
+};
+export const getDogVoteCount = () => {
+  return applicationState.dogVoteCount;
+};
+export const fetchCatVoteCount = async () => {
+  const data = await fetch(`${dbAPI}/votes?animal_like=cat`);
+  const jsonData = await data.json();
+  applicationState.catVoteCount = jsonData.length;
+};
+export const getCatVoteCount = () => {
+  return applicationState.catVoteCount;
 };
 
 //---------------------------Submit Votes Section------------------------------
