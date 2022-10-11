@@ -1,4 +1,4 @@
-import { getRandomDog, getRandomCat } from './dataAccess.js';
+import { getRandomDog, getRandomCat, getAllVotes } from "./dataAccess.js";
 
 export const catsDogs = () => {
   const randomDog = getRandomDog();
@@ -19,4 +19,9 @@ export const catsDogs = () => {
             <button id="submitBtn">Submit Your Vote</button>
         </section>
         `;
+};
+
+export const updateScoreBoard = () => {
+  const allVotes = getAllVotes();
+  //loop through all votes, if current vote
 };

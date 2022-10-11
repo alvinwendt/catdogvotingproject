@@ -1,5 +1,5 @@
 import { catsDogs } from "./catsDogs.js";
-import { fetchRandomDog, fetchRandomCat } from "./dataAccess.js";
+import { fetchRandomDog, fetchRandomCat, fetchAllVotes } from "./dataAccess.js";
 import { displayFeed } from "./feed.js";
 
 const container = document.querySelector("#voting");
@@ -7,7 +7,9 @@ const container = document.querySelector("#voting");
 const render = async () => {
   await fetchRandomDog();
   await fetchRandomCat();
-  displayFeed();
+  await fetchAllVotes();
+  await displayFeed();
+
   container.innerHTML = catsDogs();
 };
 
