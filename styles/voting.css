@@ -52,6 +52,7 @@ p {
 }
 
 .selected {
+    box-sizing: border-box;
   border: 5px solid rgb(64, 185, 64);
   background-color: rgba(64, 185, 62, 0.3);
   width: 100%;
