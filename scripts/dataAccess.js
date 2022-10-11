@@ -1,6 +1,6 @@
-const dogAPI = "https://api.thedogapi.com/v1/images";
-const catAPI = "https://api.thecatapi.com/v1/images";
-const dbAPI = "http://localhost:8080";
+const dogAPI = 'https://api.thedogapi.com/v1/images';
+const catAPI = 'https://api.thecatapi.com/v1/images';
+const dbAPI = 'http://localhost:8080';
 
 const applicationState = {
   votes: [],
@@ -94,7 +94,7 @@ export const postVote = async (vote) => {
     body: JSON.stringify(vote),
   };
   //const mainContainer = document.querySelector('#container');
-  const response = await fetch(`${API}/votes`, fetchOptions);
+  const response = await fetch(`${dbAPI}/votes`, fetchOptions);
   const responseJson = await response.json();
   // state changed
   document.dispatchEvent(new CustomEvent('stateChanged'));
