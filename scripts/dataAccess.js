@@ -1,6 +1,6 @@
-const dogAPI = "https://api.thedogapi.com/v1/images";
-const catAPI = "https://api.thecatapi.com/v1/images";
-const dbAPI = "http://localhost:8080";
+const dogAPI = 'https://api.thedogapi.com/v1/images';
+const catAPI = 'https://api.thecatapi.com/v1/images';
+const dbAPI = 'http://localhost:8080';
 
 const applicationState = {
   votes: [],
@@ -29,14 +29,14 @@ const applicationState = {
 export const fetchRandomDog = async () => {
   const data = await fetch(`${dogAPI}/search`);
   const jsonData = await data.json();
-  applicationState.randomDog.push(jsonData);
+  applicationState.randomDog = jsonData;
 };
 
 //function to fetch a Random Cat from API every page load
 export const fetchRandomCat = async () => {
   const data = await fetch(`${catAPI}/search`);
   const jsonData = await data.json();
-  applicationState.randomCat.push(jsonData);
+  applicationState.randomCat = jsonData;
 };
 
 //function to get copy of applicationState Cat
@@ -55,7 +55,7 @@ export const getRandomCat = () => {
 export const fetchVotes = async () => {
   const data = await fetch(`${dbAPI}/votes?_sort=dateTime&_order=desc&_page=1`);
   const jsonData = await data.json();
-  applicationState.votes.push(jsonData);
+  applicationState.votes = jsonData;
 };
 
 //function to get copy of applicationState votes
