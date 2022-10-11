@@ -66,5 +66,18 @@ export const getVotes = () => {
 //---------------------------Submit Votes Section------------------------------
 
 // Function to add (POST) vote obj to API here.
-
-//
+export const postVote = async (vote) => {
+  const fetchOptions = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(vote),
+  };
+  //const mainContainer = document.querySelector('#container');
+  const response = await fetch(`${API}/votes`, fetchOptions);
+  const responseJson = await response.json();
+  // state changed
+  document.dispatchEvent(new CustomEvent('stateChanged'));
+  return responseJson;
+};

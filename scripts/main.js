@@ -1,8 +1,8 @@
-import { catsDogs } from "./catsDogs.js";
-import { fetchRandomDog, fetchRandomCat } from "./dataAccess.js";
-import { displayFeed } from "./feed.js";
+import { catsDogs } from './catsDogs.js';
+import { fetchRandomDog, fetchRandomCat } from './dataAccess.js';
+import { displayFeed } from './feed.js';
 
-const container = document.querySelector("#voting");
+const container = document.querySelector('#voting');
 
 const render = async () => {
   await fetchRandomDog();
@@ -12,3 +12,7 @@ const render = async () => {
 };
 
 render();
+
+document.addEventListener('stateChanged', (customEvent) => {
+  render();
+});

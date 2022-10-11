@@ -1,4 +1,4 @@
-import { getRandomDog, getRandomCat } from './dataAccess.js';
+import { getRandomDog, getRandomCat, postVote } from './dataAccess.js';
 
 export const catsDogs = () => {
   const randomDog = getRandomDog();
@@ -20,3 +20,21 @@ export const catsDogs = () => {
         </section>
         `;
 };
+
+mainContainer.addEventListener('click', (clickEvent) => {
+    if (clickEvent.target.id === 'submitBtn') {
+       
+        
+
+        const dataToSendToAPI = {
+        id: id,
+        url: url,
+        animal: animal,
+        dateTime: timestamp,
+        title: title,
+        description: description,
+        imgid: imgid,
+        userid: userid
+    }
+    postVote(dataToSendToAPI)
+    }
